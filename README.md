@@ -15,6 +15,5 @@
 - **Grupo de laboratorio:** 02  
 - **Grupo de teoría:** 04  
 - **Semestre:** 26-1  
-- **Fecha de entrega límite:** 23/08/2025  
 
 ---
