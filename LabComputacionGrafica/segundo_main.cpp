@@ -1,8 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h> //random, srand
 #include <string.h>
 #include <glew.h>
 #include <glfw3.h>
-
 #include <time.h>   // temporizador C estándar
 
 //Dimensiones de la ventana
@@ -10,10 +10,9 @@ const int WIDTH = 800, HEIGHT = 800;
 GLuint VAO, VBO, shader; //variables de tipos de datos de GL, la u es de unsigned, sin signo 
 
 
-float red = 0.0f, green = 0.1f, blue = 0.3f; //ejercicio 1
-int movColor = 0;              // 0=Rojo, 1=Verde, 2=Azul
-clock_t lastTick = 0;			// tiempo del último cambio de color
-const double intervalo = 1.0;   // segundos por color
+float red = 0.0f, green = 0.1f, blue = 0.3f;              // 0=Rojo, 1=Verde, 2=Azul
+clock_t lastTick = 0;									// tiempo del último cambio de color
+const double intervalo = 3.0;						  // segundos por color
 
 
 
@@ -50,22 +49,33 @@ void CrearTriangulo()
 	//arreglo dinamico, le vamos a pasar vertices
 	// Un vertice no solo es xyz, se puede tener datos de color, datos de normales, y texturizado 
 		GLfloat vertices[] = {
-			0.5f, 1.0f,0.0f,
-			0.0f,0.5f, 0.0f,
-			1.0f,0.5f,0.0f,
+			// ----- Letra A -----
+			   // Triángulo grande izquierdo
+			   -0.6f, 1.0f, 0.0f,
+			   -0.8f, 0.2f, 0.0f,
+			   -0.6f, 0.2f, 0.0f,
 
-			0.0f,0.5f,0.0f,
-			0.5,0.0f,0.0f,
-			1.0f,0.5f,0.0f,
+			   // Triángulo grande derecha
+			   -0.4f, 1.0f, 0.0f,
+			   -0.4f, 0.2f, 0.0f,
+			   -0.3f, 0.2f, 0.0f,
+
+			   // Triángulo travesaño superior
+			   -0.6f, 0.5f, 0.0f,
+			   -0.4f, 0.5f, 0.0f,
+			   -0.5f, 0.7f, 0.0f,
+
+			   // Triángulo interior inferior izq
+			   -0.6f, 0.5f, 0.0f,
+			   -0.5f, 0.3f, 0.0f,
+			   -0.4f, 0.5f, 0.0f,
+
+			   // Triángulo interior inferior der
+			   -0.6f, 0.5f, 0.0f,
+			   -0.5f, 0.3f, 0.0f,
+			   -0.7f, 0.0f, 0.0f,
 
 
-			-0.9f,0.0f,0.0f,
-			-0.9f,-0.9f,0.0f,
-			0.0f,-0.9f,0.0f,
-
-			-0.9f,0.0f,0.0f,
-			0.0f,-0.9f,0.0f,
-			0.0f,0.0f,0.0f,
 
 	};
 	//siempre unir a los vertices en sentido antihorario
@@ -204,23 +214,18 @@ int main()
 	CrearTriangulo();
 	CompileShaders();
 
+	//Para poder cambiar colores de manera random, iniciamos la semilla
+	srand((unsigned)time(NULL));   // semilla distinta en cada ejecución
+	lastTick = clock();            // arranca el cronómetro ahora
+
 
 	//Loop mientras no se cierra la ventana
 	while (!glfwWindowShouldClose(mainWindow))
 	{
 		//Recibir eventos del usuario
 		glfwPollEvents();
-
 		//Limpiar la ventana
-		//para el ejercicio 1, declarar variables
-		//Ir cambiando rojo, verde,azul peridicamente
-		//mostrar cuadrado y rombo ya pequeños
-		// Selección de color por estado
-
-
-		if (movColor == 0) { red = 1.0f; green = 0.0f; blue = 0.0f; }      // Rojo
-		else if (movColor == 1) { red = 0.0f; green = 1.0f; blue = 0.0f; } // Verde
-		else /* movColor == 2 */ { red = 0.0f; green = 0.0f; blue = 1.0f; } // Azul
+		
 
 
 		glClearColor(red, green, blue, 1.0f);
@@ -233,7 +238,7 @@ int main()
 
 		glBindVertexArray(VAO);
 		//(FORMA (points, triangles, Lines,))
-		glDrawArrays(GL_TRIANGLES, 0, 12); //son los puntos que el glDrawArray me regreso
+		glDrawArrays(GL_TRIANGLES, 0, 15); //son los puntos que el glDrawArray me regreso
 		glBindVertexArray(0);
 
 		glUseProgram(0);
@@ -242,15 +247,22 @@ int main()
 
 		//poner delay o sleep para ver los colores cambiando
 		// Avanzar cada 'intervalo' segundos usando clock() del C estándar
-		clock_t now = clock();
-		double elapsed = (double)(now - lastTick) / (double)CLOCKS_PER_SEC;
-		if (elapsed >= intervalo) {
-			movColor = (movColor + 1) % 3;
-			lastTick = now;
+		
+		
+		clock_t now = clock();   // tomar el tiempo actual en ticks
+
+		double elapsed = (double)(now - lastTick) / (double)CLOCKS_PER_SEC; // calcular segundos transcurridos
+		if (elapsed >= intervalo) {   // Verifica el tiempo y si ya paso dichos segundos(intervalo)
+			red = (float)rand() / (float)RAND_MAX;   // generar valor aleatorio entre 0 y 1
+			green = (float)rand() / (float)RAND_MAX;   
+			blue = (float)rand() / (float)RAND_MAX;   
+			lastTick = now;   // reiniciar el cronómetro
 		}
 
 
-		//NO ESCRIBIR NINGUNA LÍNEA DESPUÉS DE glfwSwapBuffers(mainWindow); 
+
+
+
 	}
 
 
