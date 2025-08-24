@@ -49,32 +49,148 @@ void CrearTriangulo()
 	//arreglo dinamico, le vamos a pasar vertices
 	// Un vertice no solo es xyz, se puede tener datos de color, datos de normales, y texturizado 
 		GLfloat vertices[] = {
-			// ----- Letra A -----
-			   // Triángulo grande izquierdo
-			   -0.6f, 1.0f, 0.0f,
-			   -0.8f, 0.2f, 0.0f,
-			   -0.6f, 0.2f, 0.0f,
+				// ====== Letra A ========
+				// Triangulo grande izquierdo
+				-0.6f, 1.0f, 0.0f,
+				-0.9f, 0.2f, 0.0f,
+				-0.6f, 0.2f, 0.0f,
 
-			   // Triángulo grande derecha
-			   -0.4f, 1.0f, 0.0f,
-			   -0.4f, 0.2f, 0.0f,
-			   -0.3f, 0.2f, 0.0f,
+				// Triangulo grande derecha
+				-0.4f, 1.0f, 0.0f,
+				-0.4f, 0.2f, 0.0f,
+				-0.1f, 0.2f, 0.0f,
 
-			   // Triángulo travesaño superior
-			   -0.6f, 0.5f, 0.0f,
-			   -0.4f, 0.5f, 0.0f,
-			   -0.5f, 0.7f, 0.0f,
+				// Triangulo medio superior derecha 
+				-0.4f, 1.0f, 0.0f,
+				-0.5f, 0.8f, 0.0f,
+				-0.4f, 0.6f, 0.0f,
 
-			   // Triángulo interior inferior izq
-			   -0.6f, 0.5f, 0.0f,
-			   -0.5f, 0.3f, 0.0f,
-			   -0.4f, 0.5f, 0.0f,
+				// Triangulo medio superior izq
+				-0.6f, 1.0f, 0.0f,
+				-0.6f, 0.6f, 0.0f,
+				-0.4f, 1.0f, 0.0f,
 
-			   // Triángulo interior inferior der
-			   -0.6f, 0.5f, 0.0f,
-			   -0.5f, 0.3f, 0.0f,
-			   -0.7f, 0.0f, 0.0f,
+				// Triángulo medio inferior izq
+				-0.6f, 0.6f, 0.0f,
+				-0.6f, 0.5f, 0.0f,
+				-0.4f, 0.5f, 0.0f,
 
+				// Triángulo medio inferior der
+				-0.4f, 0.6f, 0.0f,
+				-0.6f, 0.6f, 0.0f,
+				-0.4f, 0.5f, 0.0f,
+			
+				// ====== Letra G ========
+
+				//Triangulo arriba der
+				0.8f, 1.0f, 0.0f,
+				0.4f, 1.0f, 0.0f, 
+				0.8f, 0.8f, 0.0f, 
+
+
+				//arriba izq
+				0.4f, 1.0f, 0.0f,  
+				0.2f, 0.8f, 0.0f,
+				0.8f, 0.8f, 0.0f,
+
+				//medio izq
+				0.4f, 0.8f, 0.0f,  
+				0.2f, 0.8f, 0.0f,
+				0.2f, 0.4f, 0.0f,
+
+
+				//medio der
+				0.4f, 0.8f, 0.0f,
+				0.2f, 0.4f, 0.0f,
+				0.4f, 0.2f, 0.0f,
+
+				//abajo izq
+				0.4f, 0.4f, 0.0f,
+				0.4f, 0.2f, 0.0f,
+				0.8f, 0.2f, 0.0f,
+
+				//abajo der
+				0.8f, 0.4f, 0.0f,
+				0.4f, 0.4f, 0.0f,
+				0.8f, 0.2f, 0.0f,
+
+				//boca der
+				0.8f, 0.6f, 0.0f,
+				0.7f, 0.4f, 0.0f,
+				0.8f, 0.4f, 0.0f,
+
+				//boca izq
+				0.7f, 0.6f, 0.0f,
+				0.7f, 0.4f, 0.0f,
+				0.8f, 0.6f, 0.0f,
+
+				//diente arriba
+				0.5f, 0.6f, 0.0f,
+				0.7f, 0.5f, 0.0f,
+				0.7f, 0.6f, 0.0f,
+
+				//diente abajo
+				0.5f, 0.6f, 0.0f,
+				0.55f, 0.5f, 0.0f,
+				0.7f, 0.5f, 0.0f,
+
+
+				//curva medio abajo	
+				0.4f, 0.5f, 0.0f,
+				0.4f, 0.4f, 0.0f,
+				0.5f, 0.4f, 0.0f,
+
+				//curva medio arriba
+				0.4f, 0.8f, 0.0f,
+				0.4f, 0.7f, 0.0f,
+				0.5f, 0.8f, 0.0f,
+
+
+				// ====== Letra C ========
+
+			//arriba der
+
+				-0.2f, -0.2f, 0.0f,
+				-0.6f, -0.2f, 0.0f,
+				-0.2f, -0.4f, 0.0f,
+
+			//arriba izq
+				-0.6f, -0.2f, 0.0f,
+				-0.6f, -0.4f, 0.0f,
+				-0.2f, -0.4f, 0.0f,
+
+
+			//Medio izq
+				-0.8f, -0.4f, 0.0f,
+				-0.8f, -0.8f, 0.0f,
+				-0.6f, -0.8f, 0.0f,
+
+			//medio der
+				-0.6f, -0.2f, 0.0f,
+				-0.8f, -0.4f, 0.0f,
+				-0.6f, -0.8f, 0.0f,
+
+
+			//abajo izq
+				-0.8f, -0.8f, 0.0f,
+				-0.6f, -1.0f, 0.0f,
+				-0.2f, -0.8f, 0.0f,
+
+
+			//abajo der
+				-0.2f, -0.8f, 0.0f,
+				-0.6f, -1.0f, 0.0f,
+				-0.2f, -1.0f, 0.0f,
+
+			//curva arriba
+				-0.6f, -0.4f, 0.0f,
+				-0.6f, -0.5f, 0.0f,
+				-0.5f, -0.4f, 0.0f,
+
+			//curva abajo
+				-0.6f, -0.7f, 0.0f,
+				-0.6f, -0.8f, 0.0f,
+				-0.5f, -0.8f, 0.0f,
 
 
 	};
@@ -238,7 +354,7 @@ int main()
 
 		glBindVertexArray(VAO);
 		//(FORMA (points, triangles, Lines,))
-		glDrawArrays(GL_TRIANGLES, 0, 15); //son los puntos que el glDrawArray me regreso
+		glDrawArrays(GL_TRIANGLES, 0, 78); //son los puntos que el glDrawArray me regreso
 		glBindVertexArray(0);
 
 		glUseProgram(0);
