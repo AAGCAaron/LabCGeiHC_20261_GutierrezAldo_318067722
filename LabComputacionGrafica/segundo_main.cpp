@@ -3,7 +3,7 @@
 #include <string.h>
 #include <glew.h>
 #include <glfw3.h>
-#include <time.h>   // temporizador C estándar
+#include <time.h>  
 
 //Dimensiones de la ventana
 const int WIDTH = 800, HEIGHT = 800;
@@ -296,7 +296,7 @@ int main()
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	//CREAR VENTANA
-	GLFWwindow* mainWindow = glfwCreateWindow(WIDTH, HEIGHT, "Segunda ventana", NULL, NULL);
+	GLFWwindow* mainWindow = glfwCreateWindow(WIDTH, HEIGHT, "Practica01", NULL, NULL);
 
 	if (!mainWindow)
 	{
@@ -361,9 +361,6 @@ int main()
 
 		glfwSwapBuffers(mainWindow);
 
-		//poner delay o sleep para ver los colores cambiando
-		// Avanzar cada 'intervalo' segundos usando clock() del C estándar
-		
 		
 		clock_t now = clock();   // tomar el tiempo actual en ticks
 
