@@ -1,0 +1,141 @@
+# Blender 4.2.14 LTS MTL File: 'CarroConOjos.blend'
+# www.blender.org
+
+newmtl M_Badge
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd M_Badge_Diffuse.png
+map_Pm M_Badge_Metallic.png
+map_Pr M_Badge_Roughness.png
+map_d M_Badge_Alpha.png
+map_Bump -bm 1.000000 M_Badge_Normal.png
+
+newmtl M_Black
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+Pr 1.000000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+
+newmtl M_Chrome
+Kd 0.744556 0.000000 0.005024
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Pm carpaint_Metallic.png
+map_Pr carpaint_Roughness.png
+map_Bump -bm 1.000000 M_Body_Normal.png
+
+newmtl M_License
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Pm DefaultMaterial_Metallic.png
+map_Pr DefaultMaterial_Roughness.png
+map_Bump -bm 1.000000 DefaultMaterial_Normal_OpenGL.png
+
+newmtl M_Lights
+Kd 0.000000 0.000000 0.000000
+Ks 0.627273 0.627273 0.627273
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+Pr 0.559091
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_d M_Lights_Alpha.png
+map_Bump -bm 1.000000 M_Lights_Normal.png
+
+newmtl M_Paint
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+Pr 0.078689
+Pm 0.291803
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd M_Clearcoat_Normal.png
+
+newmtl M_Paint.001
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+Pr 0.078689
+Pm 0.291803
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd M_Clearcoat_Normal.png
+
+newmtl Material.003
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pr 0.500000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd escudo_fi_color.tga
+
+newmtl ojos
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pr 0.500000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd ojosLucas.tga
