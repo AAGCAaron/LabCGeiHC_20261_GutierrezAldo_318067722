@@ -1,0 +1,12 @@
+# Blender 4.2.15 LTS MTL File: 'scifi door.blend'
+# www.blender.org
+
+newmtl Material.002
+Ns 250.000000
+Ka 0.495238 0.495238 0.495238
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd ../../../../../door_r.png
